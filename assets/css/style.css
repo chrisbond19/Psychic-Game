@@ -1,21 +1,33 @@
-
+body{
+	background-image: url(../images/242.jpg);
+ 	background-repeat: no-repeat;
+	background-size: 1200px auto;
+}
 .container{
-			width: 100%;
+			width: 50%;
+			height: 150%;
 			max-width: 960px;
-			margin: 150px auto;
+			margin: 25% auto;
 			clear:both;
+			background-color: white;
+			padding: 10% 10%;
 			}
 h1{
 	font-size: 42px;
-	color: purple;
+	color: #D2B785;
 	text-align: center;
+	font-weight: bold;
 }
 h2{
+	color: #D2B785;
 	text-align: center;
 	font-size: 30px;
+	font-weight: bold;
 }
 p{
+	
 	text-align: center;
-	font-size: 18px;
-	line-height: 22px;
+	font-size: 24px;
+	line-height: 26px;
+	font-weight: bold;
 }

@@ -7,7 +7,15 @@
     var losses = 0;
     var guesses = 10;
     var numberGuesses = [];
-    computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+    //Computer chooses a random letter from the array.
+    var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+    var reset = function() {
+      computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+      guesses = 10;
+      numberGuesses = [];
+    }
 
     // This function is run whenever the user presses a key.
     document.onkeyup = function() {
@@ -15,29 +23,19 @@
       // Determines which key the user presses.
       var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
       numberGuesses.push(userGuess);
-      console.log(userGuess);
-      console.log(computerGuess);
+      // Verify what the computer is guessing.
+      console.log("Computer guesses " + computerGuess);
       guesses--;
 
-
-      // Randomly chooses a choice from the options array. This is the Computer's guess.
-      // var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-
-
-      // Reworked our code from last step to use "else if" instead of lots of if statements.
       // This logic determines the outcome of the game (win/loss/tie), and increments the appropriate number
         if (computerGuess == userGuess){
             wins++;
-            guesses = 10;
-            numberGuesses = [];
-            computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+            reset();
             alert("You win! You must be a Psychic!");
         }
         else if (guesses == 0){
             losses++;
-            guesses = 10;
-            numberGuesses = [];
-            computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+            reset();
             alert("You lose! Try again!");
           } 
         else if (userGuess =! computerGuess) {
@@ -50,10 +48,10 @@
           "<h1>The Psychic Game</h1>" +
           "<p><h2>Guess what letter I'm thinking of..</h2></p>" +
           "<br>" +
-          "<p>wins: " + wins + "</p>" +
-          "<p>losses: " + losses + "</p>" +
-          "<p>Guesses Left: " + guesses + "</p>" +
-          "<p>Your Guesses so far: " + numberGuesses + " </p>";
+          "<p>Wins: " + wins + "</p>" +
+          "<p>Losses: " + losses + "</p>" +
+          "<p>Guesses left: " + guesses + "</p>" +
+          "<p>Your guesses so far:  " + numberGuesses + "</p>";
 
         // Set the inner HTML contents of the #game div to our html string
         document.querySelector("#game").innerHTML = html;
