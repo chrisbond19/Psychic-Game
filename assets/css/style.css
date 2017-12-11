@@ -1,13 +1,12 @@
 body{
 	background-image: url(../images/242.jpg);
- 	background-repeat: no-repeat;
+ 	
 	background-size: 1200px auto;
 }
 .container{
 			width: 50%;
-			height: 150%;
 			max-width: 960px;
-			margin: 25% auto;
+			margin: 15% auto;
 			clear:both;
 			background-color: white;
 			padding: 10% 10%;
@@ -21,13 +20,13 @@ h1{
 h2{
 	color: #D2B785;
 	text-align: center;
-	font-size: 30px;
+	font-size: 32px;
 	font-weight: bold;
 }
 p{
 	
 	text-align: center;
-	font-size: 24px;
-	line-height: 26px;
+	font-size: 26px;
+	line-height: 28px;
 	font-weight: bold;
 }
