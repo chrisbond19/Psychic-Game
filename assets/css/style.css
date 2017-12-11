@@ -18,10 +18,11 @@ h1{
 	font-weight: bold;
 }
 h2{
-	color: #D2B785;
+	color: grey;
 	text-align: center;
 	font-size: 32px;
 	font-weight: bold;
+	line-height: 46px;
 }
 p{
 	
